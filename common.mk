@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libspkrprot \
     libssrec \
-    libstdc++.vendor \
+    libstdc++_vendor \
     libvolumelistener \
     sound_trigger.primary.lahaina:32
 
@@ -319,6 +319,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     vendor.qti.hardware.perf@2.2.vendor
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
@@ -340,6 +344,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.frameworks.sensorservice@1.0 \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.0-service.multihal \
     libsensorndkbridge \
     sensors.oplus
@@ -449,7 +455,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
     libwpa_client \
